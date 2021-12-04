@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+
+void one();
+void two();
+void three();
+
+
+
+
+void main() {
+
+	try {
+		one();
+	}
+	catch(int expn){
+		if(expn == -1) cout << "error" << endl;
+	}
+
+
+}
+
+void one() {
+	cout << "first func" << endl;
+	two();
+}
+
+void two() {
+	cout << "second func" << endl;
+	three();
+}
+
+void three() {
+	cout << "third func" << endl;
+	throw -1;
+}
